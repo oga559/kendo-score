@@ -1,67 +1,93 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <form method="POST">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/score.css">
+    <title>スコアページ</title>
+</head>
+<body>
+        <form method="POST" class="score-form"  action="{{ route('store') }}" >
             @csrf
-            <input type="hidden" value="{{ Auth::id() }}" name="user_id">
-            <label>先鋒</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
-            </div>
-                <input>
-            <label>先鋒</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
-            </div>
-
-            <label>次鋒</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
-            </div>
-
-            <label>次鋒</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+            <div class="position-wrapper">
+                <input type="hidden" value="{{ Auth::id() }}" name="user_id">
+                <div>先鋒</div>
+                <div>
+                    <input type="text" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="1" name="score[position][]">
+                </div>
+                    <input type="text" name="score[point][]">
+                    <input type="text" name="score[point][]">
+                <div>先鋒</div>
+                <div>
+                    <input type="text" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="2" name="score[position][]">
+                </div>
             </div>
 
-            <label>中堅</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+            <div class="position-wrapper">
+                <div>次鋒</div>
+                <div>
+                    <input type="text" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="3" name="score[position][]">
+                </div>
+                <input type="text" name="score[point][]">
+                <input type="text" name="score[point][]">
+                <div>次鋒</div>
+                <div>
+                    <input type="text" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="4" name="score[position][]">
+                </div>
             </div>
 
-            <label>中堅</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+            {{-- <div class="position-wrapper">
+                <div>中堅</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="4" name="position">
+                </div>
+                <input type="text" name="point">
+                <input type="text" name="point">
+                <div>中堅</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="5" name="position">
+                </div>
             </div>
 
-            <label>副将</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+            <div class="position-wrapper">
+                <div>副将</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="6" name="position">
+                </div>
+                <input type="text" name="point">
+                <input type="text" name="point">
+                <div>副将</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="7" name="position">
+                </div>
             </div>
 
-            <label>副将</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+            <div class="position-wrapper">
+                <div>大将</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="8" name="position">
+                </div>
+                <input type="text" name="point">
+                <input type="text" name="point">
+                <div>大将</div>
+                <div>
+                    <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
+                    <input type="hidden" value="9" name="position">
+                </div> --}}
             </div>
-
-            <label>大将</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
-            </div>
-
-            <label>大将</label>
-            <div>
-                <input type="text" name="name" placeholder="名前" value="{{ old('name') }}">
-            </div>
-
-            <div>
                 <input type="submit" value="保存">
-            </div>
         </form>
     </div>
-</x-app-layout>
+</body>
+
+</html>

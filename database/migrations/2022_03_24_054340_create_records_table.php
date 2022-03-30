@@ -15,9 +15,9 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('player_id');
             $table->boolean('position');
             $table->text('point');
-            $table->foreignId('player_id')->constrained('players');;
             $table->timestamps();
         });
     }
