@@ -13,11 +13,14 @@ class ScoreController extends Controller
     public function store(Request $request){
 
         for($i = 0; $i < 3; $i++){
-            $player = new Record();
-            $player->player_id = $i;
-            $player->position = $request->score['position'][$i];
-            $player->point = $request->score['point'][$i];
+            $record = new Record();
+            $player = new Player();
+            $player->name = $request->score['name'][$i];
+            $record->player_id = $i;
+            $record->position = $request->score['position'][$i];
+            $record->point = $request->score['point'][$i];
             $player->save();
+            $record->save();
         }
 
         return view('dashboard');

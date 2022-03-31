@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Player extends Model
 {
     use HasFactory;
-    protected $table = 'player';
+    protected $table = 'players';
 
     //可変項目
     protected $fillable = [
@@ -17,4 +17,14 @@ class Player extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function scores()
+    {
+        return $this->belongsToMany(Score::class);
+    }
+
+    public function records()
+    {
+        return $this->hasMany(Record::class);
+    }
 }
