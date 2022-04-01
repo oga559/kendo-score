@@ -12,7 +12,7 @@ class Record extends Model
 
     //可変項目
     protected $fillable = [
-        'user_id',
+        'player_id',
         'position',
         'point',
         'created_at',
