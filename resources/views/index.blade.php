@@ -35,7 +35,8 @@
                     @endauth
                 </div>
             @endif
-
+            <a href="{{ route('score-create') }}">スコア登録</a>
+            <a href="{{ route('score-history') }}">スコア履歴</a>
         </div>
     </body>
 </html>

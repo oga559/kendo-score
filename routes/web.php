@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+Route::get('score-history', 'App\Http\Controllers\ScoreController@scoreHistory')->name('score-history');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    
-    return view('dashboard');
-})->name('dashboard');
+    return view('score-create');
+})->name('score-create');
 
-Route::post('/post', 'App\Http\Controllers\ScoreController@store')->name('store');
+Route::post('/', 'App\Http\Controllers\ScoreController@store')->name('store');
