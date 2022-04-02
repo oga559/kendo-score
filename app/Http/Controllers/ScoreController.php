@@ -16,7 +16,13 @@ class ScoreController extends Controller
     {
         DB::beginTransaction();
         try {
-            for ($i = 0; $i < 3;$i++) {
+            //スコアテーブルに保存
+            $score = new Score();
+            $score->user_id = Auth::id();
+            $score->save();
+
+
+            for ($i = 0; $i < 4;$i++) {
                 //プレイヤーテーブルに保存
                 $player = new Player($request->get('player', [
                         'name' => $request->score['name'][$i]
@@ -32,6 +38,11 @@ class ScoreController extends Controller
                         'point' => $request->score['point'][$i]
                     ]));
                 $record->save();
+
+                // $score = Score::find($score->id);
+                // $score->players()->attach($player->id);
+                $player = Player::find($player->id);
+                $player->scores()->attach($score->id);
             }
         } catch (Exception $e) {
             DB::rollback();

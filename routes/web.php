@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('score-history', 'App\Http\Controllers\ScoreController@scoreHistory')->name('score-history');
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::get('/score-create', function () {
     return view('score-create');
 })->name('score-create');
+
+Route::get('score-history', 'App\Http\Controllers\ScoreController@scoreHistory')->name('score-history');
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return view('index');
+})->name('index');
 
 Route::post('/', 'App\Http\Controllers\ScoreController@store')->name('store');

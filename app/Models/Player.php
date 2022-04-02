@@ -20,7 +20,8 @@ class Player extends Model
 
     public function scores()
     {
-        return $this->belongsToMany(Score::class);
+        //アルファベット順でモデルを結合するので、第二引数で命名した
+        return $this->belongsToMany(Score::class,'score_player');
     }
 
     public function records()
