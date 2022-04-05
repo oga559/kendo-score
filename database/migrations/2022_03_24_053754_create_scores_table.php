@@ -17,6 +17,8 @@ class CreateScoresTable extends Migration
             $table->id();
             //ユーザーのidしか登録できず、スコアにuser_idを登録できるようにする ver7以降の使用可
             $table->foreignId('user_id')->constrained('users');
+            $table->text('game_name');
+            $table->dateTime('game_day');
             $table->timestamps();
         });
     }

@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    {{-- 今までのスコアを表示 --}}
     @foreach ($score as $scores)
-        {{ $scores->id }}
+    <a href={{ route('history-detail',$scores->id) }}>
+        {{ $scores->game_name }}
+        {{ $scores->game_day }}
+    </a>
     @endforeach
 </body>
 </html>

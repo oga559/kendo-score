@@ -15,6 +15,8 @@ class Score extends Model
     //可変項目
     protected $fillable = [
 	    'user_id',
+        'game_name',
+        'game_day',
         'created_at',
         'updated_at'
     ];

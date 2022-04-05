@@ -17,7 +17,9 @@ class CreateRecordsTable extends Migration
             $table->id();
             $table->foreignId('player_id');
             $table->boolean('position');
-            $table->text('point');
+            $table->boolean('first_point')->nullable();
+            $table->boolean('second_point')->nullable();
+            $table->boolean('third_point')->nullable();
             $table->timestamps();
         });
     }

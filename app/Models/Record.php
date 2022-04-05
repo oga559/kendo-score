@@ -15,6 +15,9 @@ class Record extends Model
         'player_id',
         'position',
         'point',
+        'first_point',
+        'second_point',
+        'third_point',
         'created_at',
         'updated_at'
     ];
