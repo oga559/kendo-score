@@ -22,7 +22,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="1" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(3);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -31,7 +32,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(4);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -40,7 +42,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(5);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -55,7 +58,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="2" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(0);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -64,7 +68,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(1);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -73,7 +78,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(2);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -90,7 +96,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="3" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(9);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -99,7 +106,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(10);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -108,7 +116,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(11);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -122,7 +131,8 @@
                         <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                         <input type="hidden" value="4" name="score[position][]">
                         <div class="select_wrapper">
-                            <select class="select"  name="score[first_point][]">
+                            <select class="select"  name="score[first_point][]"  onclick="del_select(6);">
+                                <option value="0"></option>
                                 <option value="1">面</option>
                                 <option value="2">小手</option>
                                 <option value="2">胴</option>
@@ -131,7 +141,8 @@
                             </select>
                         </div>
                         <div class="select_wrapper">
-                            <select class="select"  name="score[second_point][]">
+                            <select class="select"  name="score[second_point][]" onclick="del_select(7);">
+                                <option value="0"></option>
                                 <option value="1">面</option>
                                 <option value="2">小手</option>
                                 <option value="2">胴</option>
@@ -140,7 +151,8 @@
                             </select>
                         </div>
                         <div class="select_wrapper">
-                            <select class="select"  name="score[third_point][]">
+                            <select class="select"  name="score[third_point][]" onclick="del_select(8);">
+                                <option value="0"></option>
                                 <option value="1">面</option>
                                 <option value="2">小手</option>
                                 <option value="2">胴</option>
@@ -157,7 +169,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="5" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(15);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -166,7 +179,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(16);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -175,7 +189,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(17);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -189,7 +204,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="6" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(12);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -198,7 +214,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(13);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -207,7 +224,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(14);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -224,7 +242,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="7" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(21);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -233,7 +252,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(22);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -242,7 +262,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(23);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -256,7 +277,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="8" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(18);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -265,7 +287,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(19);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -274,7 +297,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(20);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -291,7 +315,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="9" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(27);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -300,7 +325,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(28);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -309,7 +335,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(29);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -323,7 +350,8 @@
                             <input type="text" class="input" name="score[name][]" placeholder="名前" value="{{ old('name') }}">
                             <input type="hidden" value="10" name="score[position][]">
                             <div class="select_wrapper">
-                                <select class="select"  name="score[first_point][]">
+                                <select class="select"  name="score[first_point][]"  onclick="del_select(24);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -332,7 +360,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[second_point][]">
+                                <select class="select"  name="score[second_point][]" onclick="del_select(25);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
@@ -341,7 +370,8 @@
                                 </select>
                             </div>
                             <div class="select_wrapper">
-                                <select class="select"  name="score[third_point][]">
+                                <select class="select"  name="score[third_point][]" onclick="del_select(26);">
+                                    <option value="0"></option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
                                     <option value="2">胴</option>
