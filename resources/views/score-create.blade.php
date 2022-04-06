@@ -355,6 +355,7 @@
         </form>
     </div>
     </div>
+    <script src="{{ asset('js/score_create.js') }}"></script>
 </body>
 
 </html>
