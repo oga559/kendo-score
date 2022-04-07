@@ -10,12 +10,15 @@
 </head>
 
 <body>
+
+<input type="button" value="リセット" onclick="reset_btn();">
+
     <div class="main">
         <form method="POST" action="{{ route('store') }}">
             @csrf
-                <input type="hidden" value="{{ Auth::id() }}" name="user_id">
+                <input type="hidden" value="{{ Auth::id() }}" name="user_id" value="2014-04-01">
                 <input type="text" class="input" name="game_name"/>
-                <input type="date" name="game_day"/>
+                <input type="date" class="date" name="game_day"/>
                 <div class="score_main">
                     <div class="left">
                         <div>先鋒</div>
