@@ -12,6 +12,7 @@ class Player extends Model
 
     //可変項目
     protected $fillable = [
+        'id',
         'user_id',
 	    'name',
         'created_at',

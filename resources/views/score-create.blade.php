@@ -12,7 +12,13 @@
 <body>
 
 <input type="button" value="リセット" onclick="reset_btn();">
+<input type="button" id="openBtn" value="今までの選手選択">
 
+<div id="modal" class="modal">
+    <div class="modal_content">
+        <input type="button" id="closeBtn" value="閉じる">
+    </div>
+</div>
     <div class="main">
         <form method="POST" action="{{ route('store') }}">
             @csrf
@@ -388,7 +394,11 @@
         </form>
     </div>
     </div>
-    <script src="{{ asset('js/score_create.js') }}"></script>
+    <script>
+        window.Laravel = {};
+        window.Laravel.player = @json($player);
+    </script>
+    <script src="{{ asset('js/score_create.js') }}" type="text/javascript"></script>
 </body>
 
 </html>

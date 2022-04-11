@@ -12,6 +12,19 @@ use Illuminate\Support\Facades\DB;
 
 class ScoreController extends Controller
 {
+    public function scoreCreate()
+    {
+        //ユーザidからスコアの履歴を取得
+        $user_id = Auth::id();
+        $user_player = Score::where('user_id', $user_id)->with(['players'])->get();
+        foreach ($user_player as $user_players) {
+            $player[] = $user_players;
+        }
+
+        return view('score-create', compact('player'));
+    }
+
+    //スコアを保存する
     public function store(Request $request)
     {
 
@@ -38,7 +51,9 @@ class ScoreController extends Controller
                 $record = new Record($request->get('record', [
                         'player_id' => $player->id,
                         'position' => $request->score['position'][$i],
-                        'first_point' => $request->score['first_point'][$i]
+                        'first_point' => $request->score['first_point'][$i],
+                        'second_point' => $request->score['second_point'][$i],
+                        'third_point' => $request->score['third_point'][$i]
                     ]));
                 $record->save();
 

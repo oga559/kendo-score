@@ -17,9 +17,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/score-create', function () {
-    return view('score-create');
-})->name('score-create');
+
+// Route::get('/score-create', function () {
+//     return view('score-create');
+// })->name('score-create');
+
+Route::get('/score-create', 'App\Http\Controllers\ScoreController@scoreCreate')->name('score-create');
 
 Route::get('score-history', 'App\Http\Controllers\ScoreHistoryController@scoreHistory')->name('score-history');
 Route::get('score-history/{score}', 'App\Http\Controllers\ScoreHistoryController@detail')->name('history-detail');
@@ -28,4 +31,4 @@ Route::get('score-history/{score}', 'App\Http\Controllers\ScoreHistoryController
 //     return view('index');
 // })->name('index');
 
-Route::post('/', 'App\Http\Controllers\ScoreController@store')->name('store');
+Route::post('/score-store', 'App\Http\Controllers\ScoreController@store')->name('store');

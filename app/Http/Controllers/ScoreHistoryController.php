@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ScoreHistoryController extends Controller
 {
-    public function scoreHistory(Request $request)
+    public function scoreHistory()
     {
         //ユーザidからスコアの履歴を取得
         $user_id = Auth::id();
@@ -19,7 +19,6 @@ class ScoreHistoryController extends Controller
 
     public function detail($score_id)
     {
-
         $score = Score::with(['players.records'])->find($score_id);
         return view('history-detail', compact('score'));
     }
