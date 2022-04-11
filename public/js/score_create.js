@@ -5,24 +5,24 @@ const openBtn = document.getElementById('openBtn');
 const closeBtn = document.getElementById('closeBtn');
 const modal_content = document.querySelector('.modal_content');
 
-// 表示（openBtnというidのボタンがクリックされたら、display:blockになる）
+// モーダル表示して、過去に登録したプレイヤー登録可能
 openBtn.addEventListener('click', function(){
     modal.style.display = 'block'
-console.log(modal_content);
-    //Scoreデータの多次元配列を取り出す
+
+    //Scoreデータの多次元配列を１つずつ取り出す
     Laravel.player.forEach(element => {
 
-        //試合名を作成する処理
+        //Scoreデータから試合名を作成する処理
         const p = document.createElement("p");
         const game_title = document.createTextNode(element.game_name);
         p.appendChild(game_title);
         modal_content.appendChild(p);
 
-        //Playerテーブルからselect作成する処理
-        let select = document.createElement('select');
         //PlayerデータをScoreデータからリレーションで取り出す
+        //そしてPlayerのselect作成
+        let select = document.createElement('select');
         element.players.forEach(element =>{
-            console.log(element)
+            console.log(element);
             let option = document.createElement("option");
             option.text = element.name;
             option.value = element.id;
@@ -45,7 +45,7 @@ addEventListener('click', function(close_bg){
     }
 })
 
-//片方が一本を選択した場合、もう片方のselectの選択を無しにする
+//select両方１本とることがないようにする
 const del_select = ($i) =>{
     let obj = selects[$i];
     obj.selectedIndex = 0;
