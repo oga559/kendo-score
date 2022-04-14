@@ -45,7 +45,7 @@ addEventListener('click', function(close_bg){
     }
 })
 
-//select両方１本とることがないようにする
+//select両者１本とることがないようにする
 const del_select = ($i) =>{
     let obj = selects[$i];
     obj.selectedIndex = 0;

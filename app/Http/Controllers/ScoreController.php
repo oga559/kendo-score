@@ -27,7 +27,7 @@ class ScoreController extends Controller
     //スコアを保存する
     public function store(Request $request)
     {
-
+        //トランザクション化
         DB::beginTransaction();
         try {
             //スコアテーブルに保存
@@ -60,9 +60,9 @@ class ScoreController extends Controller
                 $player = Player::find($player->id);
                 $player->scores()->attach($score->id);
             }
+        //エラーがあったらロールバック
         } catch (Exception $e) {
             DB::rollback();
-            return back()->withInput();
         }
         DB::commit();
         return view('index');
