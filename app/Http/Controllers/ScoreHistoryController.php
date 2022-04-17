@@ -14,7 +14,7 @@ class ScoreHistoryController extends Controller
         //ユーザidからスコアの履歴を取得
         $user_id = Auth::id();
         $score = Score::where('user_id', $user_id)->get();
-        return view('score-history', compact('score'));
+        return view('history-list', compact('score'));
     }
 
     public function detail($score_id)
