@@ -15,7 +15,7 @@ class CreateRecordsTable extends Migration
     {
         Schema::create('records', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('player_id');
+            $table->foreignId('player_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->boolean('position');
             $table->boolean('first_point')->nullable();
             $table->boolean('second_point')->nullable();

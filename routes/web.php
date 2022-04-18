@@ -23,7 +23,8 @@ Route::get('/score-create', 'App\Http\Controllers\ScoreController@scoreCreate')-
 
 Route::get('score-history', 'App\Http\Controllers\ScoreHistoryController@scoreHistory')->name('score-history');
 Route::get('score-history/{score}', 'App\Http\Controllers\ScoreHistoryController@detail')->name('history-detail');
-Route::get('/player-list', 'App\Http\Controllers\GraphController@graphList')->name('graph-list');
+Route::get('/player-list', 'App\Http\Controllers\GraphController@playerList')->name('player-list');
+Route::get('/graph/{player}', 'App\Http\Controllers\GraphController@graph')->name('graph');
 
 
 

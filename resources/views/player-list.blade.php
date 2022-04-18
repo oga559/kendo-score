@@ -9,8 +9,9 @@
 <body>
     {{-- 今までのスコアを表示 --}}
     @foreach ($score as $scores)
+    <p>試合名:    {{ $scores->game_name }}</p>
         @foreach ($scores->players as $players)
-            <a href={{ route('history-detail',$players->id) }}>
+            <a href={{ route('graph',$players->id) }}>
                 {{ $players->name }}
                 <br>
             </a>

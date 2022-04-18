@@ -15,8 +15,9 @@ class CreateScorePlayerTable extends Migration
     {
         Schema::create('score_player', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('score_id');
-            $table->foreignId('player_id');
+            $table->foreignId('score_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            
+            $table->foreignId('player_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
