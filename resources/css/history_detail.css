@@ -43,8 +43,7 @@
 	background-image: none;
 	box-shadow: none;
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	     appearance: none;
+	appearance: none;
     padding: 8px 38px 8px 8px;
 }
 
@@ -64,4 +63,3 @@
     background: #fff;
     width: 80%;
 }
-

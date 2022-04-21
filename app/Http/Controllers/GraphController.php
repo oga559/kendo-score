@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Record;
+use Illuminate\Http\Request;
 use App\Models\Score;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,8 +20,31 @@ class GraphController extends Controller
 
     public function graph($player_id)
     {
-        $score = Record::where('player_id', '=', $player_id)->get();
-        dd($score);
-        return view('history-detail', compact('score'));
+        $record1 = Record::where('player_id',$player_id)->where('first_point', '=', 1)->get()->count();
+        $record2 = Record::where('player_id',$player_id)->where('second_point', '=', 1)->get()->count();
+        $record3 = Record::where('player_id',$player_id)->where('third_point', '=', 1)->get()->count();
+        $graph = Record::where('player_id',$player_id)->get();
+        $i = 0;
+        $point_array = ['first_point','second_point','third_point'];
+        $men = 0;
+        $kote = 0;
+        $dou = 0;
+
+        //今まで取った面、小手、胴を取得
+        for($i=1; $i<=3;$i++){
+            for($k=0; $k<=2;$k++){
+                if($i === 1){
+                    $men += Record::where('player_id',$player_id)->where($point_array[$k], '=', $i)->get()->count();
+                }
+                if($i === 2){
+                    $kote += Record::where('player_id',$player_id)->where($point_array[$k], '=', $i)->get()->count();
+                }
+                if($i === 3){
+                    $dou += Record::where('player_id',$player_id)->where($point_array[$k], '=', $i)->get()->count();
+                }
+            }
+        }
+
+        return view('graph', compact('men','kote','dou'));
     }
 }

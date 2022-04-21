@@ -35,9 +35,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -45,9 +45,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -55,9 +55,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -71,9 +71,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -81,9 +81,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -91,9 +91,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -109,9 +109,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -119,9 +119,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -129,9 +129,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -182,9 +182,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -192,9 +192,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -202,9 +202,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -217,9 +217,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -227,9 +227,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -237,9 +237,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                 </div>
@@ -255,9 +255,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -265,9 +265,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -275,9 +275,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -290,9 +290,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -300,9 +300,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -310,9 +310,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                 </div>
@@ -328,9 +328,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -338,9 +338,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -348,9 +348,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                     </div>
@@ -363,9 +363,9 @@
                                     <option value="0">1本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -373,9 +373,9 @@
                                     <option value="0">2本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                             <div class="select_wrapper">
@@ -383,9 +383,9 @@
                                     <option value="0">3本目</option>
                                     <option value="1">面</option>
                                     <option value="2">小手</option>
-                                    <option value="2">胴</option>
-                                    <option value="3">突き</option>
-                                    <option value="4">反則</option>
+                                    <option value="3">胴</option>
+                                    <option value="4">突き</option>
+                                    <option value="5">反則</option>
                                 </select>
                             </div>
                 </div>
@@ -398,7 +398,7 @@
         window.Laravel = {};
         window.Laravel.player = @json($player);
     </script>
-    <script src="{{ asset('js/score_create.js') }}" type="text/javascript"></script>
+    <script src="{{ mix('js/score_create.js') }}"></script>
 </body>
 
 </html>

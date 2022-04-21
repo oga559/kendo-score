@@ -395,8 +395,6 @@
             <input type="submit" value="保存">
         </form>
     </div>
-    <script src="{{ asset('js/history_detail.js') }}" type="text/javascript"></script>
-
+    <script src="{{ mix('js/history_detail.js') }}"></script>
 </body>
-
 </html>
