@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>スコア履歴一覧</title>
-</head>
+@extends('layouts.layout')
+@section('title', "スコア履歴一覧")
+@section('body')
 <body>
     {{-- 今までのスコアを表示 --}}
     @foreach ($score as $scores)
@@ -15,4 +10,4 @@
     </a>
     @endforeach
 </body>
-</html>
+@endsection
