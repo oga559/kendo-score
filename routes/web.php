@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('index');
-});
+Route::middleware(['auth:sanctum', 'verified'])->get('/', 'App\Http\Controllers\IndexController@index')->name('');
 
 
 

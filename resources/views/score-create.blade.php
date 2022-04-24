@@ -1,5 +1,8 @@
 @extends('layouts.layout')
 @section('title', 'スコア作成')
+@push('style')
+    <link rel="stylesheet" href="/css/score_create.css">
+@endpush
 @section('body')
     <body>
         <input type="button" value="リセット" onclick="reset_btn();">

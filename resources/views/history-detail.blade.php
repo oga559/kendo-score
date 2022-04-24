@@ -1,5 +1,8 @@
 @extends('layouts.layout')
 @section('title', "スコア履歴詳細")
+@push('style')
+    <link rel="stylesheet" href="/css/history_detail.css">
+@endpush
 @section('body')
 <body>
     <div class="main">
