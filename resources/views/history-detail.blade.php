@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+@extends('layouts.layout')
+@section('title', "スコア履歴詳細")
+@push('style')
     <link rel="stylesheet" href="/css/history_detail.css">
-    <title>スコア履歴詳細</title>
-</head>
-
+@endpush
+@section('body')
 <body>
     <div class="main">
         <form method="POST" action="{{ route('store') }}">
@@ -395,8 +390,6 @@
             <input type="submit" value="保存">
         </form>
     </div>
-    <script src="{{ asset('js/history_detail.js') }}" type="text/javascript"></script>
-
+    <script src="{{ mix('js/history_detail.js') }}"></script>
 </body>
-
-</html>
+@endsection

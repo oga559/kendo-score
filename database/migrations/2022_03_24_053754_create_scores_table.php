@@ -15,8 +15,9 @@ class CreateScoresTable extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
-            //ユーザーのidしか登録できず、スコアにuser_idを登録できるようにする ver7以降の使用可
-            $table->foreignId('user_id')->constrained('users');
+            //constrained() --スコアのuer_idはuserのidしか登録できなくする ver7以降の使用可
+            //onDelete() --userが消えたら紐づくscoreも消える
+            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->text('game_name');
             $table->dateTime('game_day');
             $table->timestamps();

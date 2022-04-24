@@ -12,6 +12,18 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
+    .js('resources/js/score_create.js', 'public/js')
+    .js('resources/js/history_detail.js', 'public/js')
+    .js('resources/js/graph.js', 'public/js')
+    .postCss('resources/css/app.css', 'public/css')
+    .postCss('resources/css/index.css', 'public/css')
+    .postCss('resources/css/history_detail.css', 'public/css')
+    .postCss('resources/css/score_create.css', 'public/css', [
+        require('postcss-import'),
+        require('tailwindcss'),
     ]);
+
+
+if (mix.inProduction()) {
+    mix.version();
+}

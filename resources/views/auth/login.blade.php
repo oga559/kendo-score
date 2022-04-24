@@ -5,6 +5,7 @@
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
+        <a href="{{ route('register') }}">登録</a>
 
         @if (session('status'))
             <div class="mb-4 font-medium text-sm text-green-600">

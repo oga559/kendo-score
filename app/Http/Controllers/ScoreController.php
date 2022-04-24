@@ -17,6 +17,7 @@ class ScoreController extends Controller
         //ユーザidからスコアの履歴を取得
         $user_id = Auth::id();
         $user_player = Score::where('user_id', $user_id)->with(['players'])->get();
+        $player = [];
         foreach ($user_player as $user_players) {
             $player[] = $user_players;
         }
