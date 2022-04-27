@@ -1,9 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
     "/js/score_create.js": "/js/score_create.js",
     "/js/history_detail.js": "/js/history_detail.js",
     "/js/graph.js": "/js/graph.js",
-    "/css/app.css": "/css/app.css",
     "/css/score_create.css": "/css/score_create.css",
     "/css/history_detail.css": "/css/history_detail.css",
     "/css/index.css": "/css/index.css"
