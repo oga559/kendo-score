@@ -12,37 +12,48 @@ var inputs = document.querySelectorAll('.input');
 var date = document.querySelector('.date');
 var openBtn = document.getElementById('openBtn');
 var closeBtn = document.getElementById('closeBtn');
-var modal_content = document.querySelector('.modal_content'); // モーダル表示して、過去に登録したプレイヤー登録可能
+var modal_content = document.querySelector('.modal_content');
+var p = document.createElement("p"); //モーダル表示
 
-openBtn.addEventListener('click', function () {
-  modal.style.display = 'block'; //Scoreデータの多次元配列を１つずつ取り出す
+var modal_open = function modal_open($input, $k) {
+  modal.style.display = 'block'; // モーダル表示して、過去に登録したプレイヤー登録可能
+  //Scoreデータの多次元配列を１つずつ取り出す
 
   Laravel.player.forEach(function (element) {
     //Scoreデータから試合名を作成する処理
-    var p = document.createElement("p");
     var game_title = document.createTextNode(element.game_name);
     p.appendChild(game_title);
     modal_content.appendChild(p); //PlayerデータをScoreデータからリレーションで取り出す
-    //そしてPlayerのselect作成
+    //そしてPlayer表示
 
-    var select = document.createElement('select');
     element.players.forEach(function (element) {
-      console.log(element);
-      var option = document.createElement("option");
-      option.text = element.name;
-      option.value = element.id;
-      select.appendChild(option);
-      p.appendChild(select);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.innerHTML = element.name;
+      btn.value = element.id;
+
+      btn.onclick = function form_in() {
+        document.querySelector('.' + $input).value = element.name;
+        var in_hidden = document.createElement("input");
+        in_hidden.setAttribute("type", "hidden");
+        in_hidden.value = element.id;
+        in_hidden.name = 'score[player_id][' + $k + ']';
+        date.appendChild(in_hidden);
+        console.log(in_hidden);
+      };
+
+      p.appendChild(btn);
     });
   });
-}); // 非表示（closeBtnというidのボタンがクリックされたら、display:noneになる）
+};
+
+window.modal_open = modal_open; // 非表示（closeBtnというidのボタンがクリックされたら、display:noneになる）
 
 window.closeBtn.addEventListener('click', function () {
   modal.style.display = 'none';
-});
-addEventListener('click', function (close_bg) {
-  if (close_bg.target === modal) {
-    modal.style.display = 'none';
+
+  while (p.firstChild) {
+    p.removeChild(p.firstChild);
   }
 }); //select両者１本とることがないようにする
 

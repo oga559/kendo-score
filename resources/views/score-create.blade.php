@@ -7,14 +7,14 @@
     <body>
         <input type="button" value="リセット" onclick="reset_btn();">
 
-        <div id="modal" class="modal">
-            <div class="modal_content">
-                <input type="button" id="closeBtn" value="閉じる">
-            </div>
-        </div>
         <div class="main">
             <form method="POST" action="{{ route('store') }}">
                 @csrf
+                <div id="modal" class="modal">
+                    <div class="modal_content">
+                        <input type="button" id="closeBtn" value="閉じる">
+                    </div>
+                </div>
                 <input type="hidden" value="{{ Auth::id() }}" name="user_id">
                 <input type="text" class="input" name="game_name" />
                 <input type="date" class="date" name="game_day" />
@@ -22,7 +22,7 @@
                     <div class="left">
                         <div>先鋒</div>
                         <input type="text" class="input input_1" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" value="今までの選手選択" onclick="modal_open();">
+                            value="{{ old('name') }}"><input type="button" value="今までの選手選択" onclick="modal_open('input_1',0);">
                         <input type="hidden" value="1" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(3);">
@@ -58,8 +58,8 @@
 
                     <div class="right">
                         <div>先鋒</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_2" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_2',1);">
                         <input type="hidden" value="2" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(0);">
@@ -97,8 +97,8 @@
                 <div class="score_main">
                     <div class="left">
                         <div>次鋒</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_3" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_3',2);">
                         <input type="hidden" value="3" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(9);">
@@ -133,8 +133,8 @@
                     </div>
                     <div class="right">
                         <div>次鋒</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_4" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_4',3);">
                         <input type="hidden" value="4" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(6);">
@@ -172,8 +172,8 @@
                 <div class="score_main">
                     <div class="left">
                         <div>中堅</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_5" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_5',4);">
                         <input type="hidden" value="5" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(15);">
@@ -208,8 +208,8 @@
                     </div>
                     <div class="right">
                         <div>中堅</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_6" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_6',5);">
                         <input type="hidden" value="6" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(12);">
@@ -247,8 +247,8 @@
                 <div class="score_main">
                     <div class="left">
                         <div>副将</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_7" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_7',6);">
                         <input type="hidden" value="7" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(21);">
@@ -283,8 +283,8 @@
                     </div>
                     <div class="right">
                         <div>副将</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_8" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_8',7);">
                         <input type="hidden" value="8" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(18);">
@@ -322,8 +322,8 @@
                 <div class="score_main">
                     <div class="left">
                         <div>大将</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_9" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_9',8);">
                         <input type="hidden" value="9" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(27);">
@@ -358,8 +358,8 @@
                     </div>
                     <div class="right">
                         <div>大将</div>
-                        <input type="text" class="input" name="score[name][]" placeholder="名前"
-                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択">
+                        <input type="text" class="input input_10" name="score[name][]" placeholder="名前"
+                            value="{{ old('name') }}"><input type="button" id="openBtn" value="今までの選手選択" onclick="modal_open('input_10',9);">
                         <input type="hidden" value="10" name="score[position][]">
                         <div class="select_wrapper">
                             <select class="select" name="score[first_point][]" onclick="del_select(24);">

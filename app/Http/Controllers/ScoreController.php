@@ -41,21 +41,29 @@ class ScoreController extends Controller
 
             for ($i = 0; $i < 10;$i++) {
                 //プレイヤーテーブルに保存
-                $player = new Player($request->get('player', [
-                        'name' => $request->score['name'][$i]
-                    ]));
+                $player = new Player();
+                if(isset($request->score['player_id'][$i])){
+                    $player = Player::find($request->score['player_id'][$i]);
+                    $player->scores()->attach($score->id);
+                    continue;
+                }
+                $player->name = $request->score['name'][$i];
                 $player->save();
+
 
                 //$playerから登録中のidが取得可能
                 //利用してuser_idに出力して紐付ける
                 //レコードテーブルに保存
-                $record = new Record($request->get('record', [
-                        'player_id' => $player->id,
-                        'position' => $request->score['position'][$i],
-                        'first_point' => $request->score['first_point'][$i],
-                        'second_point' => $request->score['second_point'][$i],
-                        'third_point' => $request->score['third_point'][$i]
-                    ]));
+                $record = new Record();
+                if(isset($request->score['player_id'][$i])){
+                    $record->player_id = $request->score['player_id'][$i];
+                }else{
+                    $record->player_id = $player->id;
+                }
+                $record->position = $request->score['position'][$i];
+                $record->first_point = $request->score['first_point'][$i];
+                $record->second_point = $request->score['second_point'][$i];
+                $record->third_point = $request->score['third_point'][$i];
                 $record->save();
 
                 $player = Player::find($player->id);
